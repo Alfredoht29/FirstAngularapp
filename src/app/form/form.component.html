@@ -1,17 +1,19 @@
 <div class="container">
     <h1>Registro de usuarios </h1>
-    <form>
+    <form #login="ngForm" (ngSubmit)="submit(login)">
         <div class="mb-3">
-          <label for="" class="form-label">Nombre</label>
-          <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+            <label for="" class="form-label">Nombre</label>
+            <input #name="ngModel" type="text" class="form-control" name="Nombre" required minlength="2" ngModel>
+            <div *ngIf="name.touched && name.invalid" class="alert alert-danger"> Invalid </div>
         </div>
         <div class="mb-3">
-          <label for="" class="form-label">Correo</label>
-          <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+            <label for="" class="form-label">Correo</label>
+            <input #mail="ngModel" type="email" class="form-control" name="Correo" ngModel email required >
+            <div *ngIf="mail.touched&&mail.invalid" class="alert alert-danger">Invalid</div>
         </div>
         <div class="mb-3">
-          <label for="" class="form-label">Contraseña</label>
-          <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+            <label for="" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" name="Contraseña" ngModel>
         </div>
         <button type="submit" class="btn btn-primary">Enviar</button>
     </form>
