@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'test-app';
+  vari = '';
+  constructor(private http: HttpClient) { }
+
+  ngOnInit() {
+    /*  this.http.get("http://localhost:8888/hola",{responseType:'text'}).subscribe((resp:any)=>{
+        this.vari=resp;
+      })*/
+  }
 }
+
