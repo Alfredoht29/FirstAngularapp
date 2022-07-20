@@ -4,14 +4,12 @@
         <div class="mb-3">
             <label for="" class="form-label">Nombre</label>
             <input #name="ngModel" type="text" class="form-control" name="Nombre" required minlength="2" ngModel>
-            <br>
-            <div *ngIf="name.touched && name.invalid" class="alert alert-danger">Nombre invalido ingresa un nombre valido* </div>
+            <div *ngIf="name.touched && name.invalid" class="alert alert-danger mt-2">Nombre invalido ingresa un nombre valido* </div>
         </div>
         <div class="mb-3">
             <label for="" class="form-label">Correo</label>
-            <input #mail="ngModel" type="email" class="form-control" name="Correo" ngModel email required >
-            <br>
-            <div *ngIf="mail.touched&&mail.invalid" class="alert alert-danger">Ingresa un correo valido*</div>
+            <input #mail="ngModel" type="email" class="form-control" name="Correo" ngModel email required>
+            <div *ngIf="mail.touched&&mail.invalid" class="alert alert-danger mt-2">Ingresa un correo valido*</div>
         </div>
         <div class="mb-3">
             <label for="" class="form-label">Contraseña</label>
