@@ -1,9 +1,12 @@
-<div>
-    <p>ruta works! {{msg|json}}</p>
-    <div *ngFor="let item of ne">
-        {{item.titulo}}<br>
-        {{item.direccion}}<br>
-        {{item.imagen}}<br>
-        <br>
+<p>ruta works! {{msg|json}}</p>
+<div class="card-group">
+    <div *ngFor="let item of ne" class="p-2">
+        <div class="card" style="width: 18rem; height:11rem;">
+            <div class="card-body">
+                <h4 class="card-title">{{item.titulo}}</h4>
+                <p class="card-text">{{item.direccion}}</p>
+                <p class="card-text">{{item.imagen}}</p>
+            </div>
+        </div>
     </div>
 </div>
