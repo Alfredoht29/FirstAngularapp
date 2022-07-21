@@ -7,13 +7,15 @@ import { NuevoComponent } from './nuevo/nuevo.component';
 import { RutaComponent } from './ruta/ruta.component';
 import { FormComponent } from './form/form.component';
 import { FormsModule } from '@angular/forms';
+import { DatatableComponent } from './datatable/datatable.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NuevoComponent,
     RutaComponent,
-    FormComponent
+    FormComponent,
+    DatatableComponent
   ],
   imports: [
     BrowserModule,
