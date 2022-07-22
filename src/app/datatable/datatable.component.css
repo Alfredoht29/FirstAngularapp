@@ -1,0 +1,4 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+table.dataTable tbody tr:hover{
+    background-color: rgba(0, 59, 160, 0.247);
+}

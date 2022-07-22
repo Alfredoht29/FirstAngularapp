@@ -5,18 +5,20 @@ declare var $: (arg0: any) => any;
   templateUrl: './datatable.component.html',
   styleUrls: ['./datatable.component.css']
 })
-export class DatatableComponent implements OnInit,AfterViewInit {
-  @ViewChild('dataTable') table:ElementRef | any;
-  dataTable:any
+export class DatatableComponent implements OnInit, AfterViewInit {
+  @ViewChild('dataTable') table: ElementRef | any;
+  dataTable: any
+  status: boolean = false;
   constructor() { }
 
   ngOnInit(): void {
-   
   }
   ngAfterViewInit(): void {
-    this.dataTable=$(this.table.nativeElement);
+    this.dataTable = $(this.table.nativeElement);
     this.dataTable.DataTable();
   }
-
+  xd(mss:String){
+    console.log(mss);
+  }
 }
 
