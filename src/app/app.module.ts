@@ -8,6 +8,7 @@ import { RutaComponent } from './ruta/ruta.component';
 import { FormComponent } from './form/form.component';
 import { FormsModule } from '@angular/forms';
 import { DatatableComponent } from './datatable/datatable.component';
+import { ObservableComponent } from './observable/observable.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { DatatableComponent } from './datatable/datatable.component';
     NuevoComponent,
     RutaComponent,
     FormComponent,
-    DatatableComponent
+    DatatableComponent,
+    ObservableComponent
   ],
   imports: [
     BrowserModule,

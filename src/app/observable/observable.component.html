@@ -1,0 +1,22 @@
+<div class="container">
+    <h2>Lista de Usuarios</h2>
+    
+    <button (click)="alternarLista()">
+      {{ mostrandoSoloUno ? 'Mostrar Todos los Usuarios' : 'Mostrar Solo Usuario 1' }}
+    </button>
+    
+    <ul *ngIf="users$ | async as users; else loading">
+      <li *ngFor="let user of users">
+        <strong>{{ user.name }}</strong> ({{ user.email }})
+      </li>
+    </ul>
+  
+    <ng-template #loading>
+      <p>Cargando usuarios...</p>
+    </ng-template>
+  
+    <div *ngIf="error" class="error">
+      <p>{{ error }}</p>
+    </div>
+  </div>
+  
