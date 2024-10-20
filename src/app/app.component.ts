@@ -7,7 +7,7 @@ import { ServicioTestService } from './servicio-test.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'test-app';
+  title = 'TestApp';
   public arr: Array<any> = []
   constructor(private http: HttpClient, private serviciotest: ServicioTestService) { }
 

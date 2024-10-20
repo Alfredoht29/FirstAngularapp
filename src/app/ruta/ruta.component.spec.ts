@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RutaComponent } from './ruta.component';
@@ -8,7 +9,7 @@ describe('RutaComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RutaComponent ]
+      declarations: [ RutaComponent ],imports: [ HttpClientModule ]
     })
     .compileComponents();
 

@@ -12,6 +12,7 @@ export class DatatableComponent implements OnInit, AfterViewInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
   ngAfterViewInit(): void {
     this.dataTable = $(this.table.nativeElement);
